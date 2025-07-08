@@ -25,7 +25,7 @@ const GameBoard: React.FC = () => {
         return (
           <div
             key={point.id}
-            className={`absolute w-12 h-12 rounded-full border-2 border-gray-400 flex items-center justify-center text-sm font-bold transition-all duration-100 ${
+            className={`absolute w-14 h-14 rounded-full border-2 border-gray-400 flex flex-col items-center justify-center text-sm font-bold transition-all duration-100 ${
               point.isClicked ? 'bg-red-500 text-white' : 'bg-white text-gray-800 hover:bg-gray-100 cursor-pointer'
             }`}
             style={{
@@ -36,7 +36,8 @@ const GameBoard: React.FC = () => {
             }}
             onClick={() => !point.isClicked && handlePointClick(point.id)}
           >
-            {point.countdown !== undefined ? point.countdown.toFixed(1) : point.id}
+            <div className='text-sm font-bold'>{point.id}</div>
+            {point.countdown !== undefined && <div className='text-xs -mt-1'>{point.countdown.toFixed(1)}s</div>}
           </div>
         )
       })}
