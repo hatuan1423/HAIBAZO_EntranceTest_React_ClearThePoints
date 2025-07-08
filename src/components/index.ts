@@ -1,1 +1,6 @@
-export * from './theme-control'
+export * from './game-header'
+export * from './game-info'
+export * from './game-control'
+export * from './game-board'
+export * from './game-footer'
+export * from './game'
