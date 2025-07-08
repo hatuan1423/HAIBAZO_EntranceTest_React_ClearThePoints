@@ -7,7 +7,7 @@ export const generatePoints = (pointCount: number): Point[] => {
   const margin = 4;
 
   for (let i = 1; i <= pointCount; i++) {
-    let x, y;
+    let x: number, y: number;
     let attempts = 0;
 
     do {
